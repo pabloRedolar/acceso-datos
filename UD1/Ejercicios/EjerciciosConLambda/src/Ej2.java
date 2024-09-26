@@ -5,5 +5,18 @@
 //“Predicate” (que es una interfaz funcional que puedes implementar con una función
 //lambda).
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Ej2 {
+    public static void main(String[] args) {
+        List<String> listaNombres = new ArrayList<>(Arrays.asList("Juan", "Manue", "Antonio", "Pablo", "Mario", "Diego", "Ana", "Ana"));
+        List<String> listaSinNombresConLetra = new ArrayList<>(listaNombres);
+
+        listaSinNombresConLetra.removeIf(s -> !s.startsWith("A"));
+
+        System.out.println(listaNombres);
+        System.out.println(listaSinNombresConLetra);
+    }
 }
