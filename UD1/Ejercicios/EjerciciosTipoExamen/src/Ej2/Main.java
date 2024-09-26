@@ -21,8 +21,6 @@ public class Main {
             while ((linea = reader.readLine()) != null) {
                 String lineaModificada = null;
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
