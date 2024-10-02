@@ -1,9 +1,6 @@
 // Generar una secuencia de números aleatorios: Utiliza un “Supplier” para generar e
 // imprimir una secuencia de diez números aleatorios.
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -23,8 +20,7 @@ public class Ej4 {
         Supplier<Integer> randomSupplier = () -> random.nextInt(100); // Números entre 0 y 99
 
         // Generar y mostrar 10 números aleatorios usando Stream
-        Stream.generate(randomSupplier)
-                .limit(10) // Limitar a 10 números
+        Stream.generate(randomSupplier).limit(10) // Limitar a 10 números
                 .forEach(System.out::println); // Imprimir cada número
 
     }
