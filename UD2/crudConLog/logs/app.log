@@ -1,0 +1,166 @@
+2024-10-07 20:41:03 INFO  Main:9 - ************ Comienza la App *************
+2024-10-07 20:41:03 TRACE UsuarioServicio:17 - *********************** Entramos en le metodo crearUsuario ************************
+2024-10-07 20:41:03 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:27 - ********************** Salimos del metodo crearUsuario *********************
+2024-10-07 20:41:03 TRACE UsuarioServicio:17 - *********************** Entramos en le metodo crearUsuario ************************
+2024-10-07 20:41:03 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:27 - ********************** Salimos del metodo crearUsuario *********************
+2024-10-07 20:41:03 TRACE UsuarioServicio:17 - *********************** Entramos en le metodo crearUsuario ************************
+2024-10-07 20:41:03 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:27 - ********************** Salimos del metodo crearUsuario *********************
+2024-10-07 20:41:03 TRACE UsuarioServicio:32 - ********************** Entramos en getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:39 - ************************* Salimos de getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:32 - ********************** Entramos en getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:39 - ************************* Salimos de getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:32 - ********************** Entramos en getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:39 - ************************* Salimos de getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:46 - *********************** Entramos en le metodo updateUsuario ************************
+2024-10-07 20:41:03 INFO  UsuarioServicio:56 - Usuario updateado: Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:58 - ************************* Salimos de updateUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:46 - *********************** Entramos en le metodo updateUsuario ************************
+2024-10-07 20:41:03 WARN  UsuarioServicio:50 - Usuario con Id: 4 no existe
+2024-10-07 20:41:03 TRACE UsuarioServicio:51 - ************************* Salimos de updateUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:62 - ***************** Entramos en deleteUser ********************
+2024-10-07 20:41:03 INFO  UsuarioServicio:68 - Usuario con id: Usuario(id=3, nombre=Manue, email=manue@gmail.com) eliminado
+2024-10-07 20:41:03 TRACE UsuarioServicio:70 - ***************** Salimos de deleteUser ********************
+2024-10-07 20:41:03 TRACE UsuarioServicio:62 - ***************** Entramos en deleteUser ********************
+2024-10-07 20:41:03 ERROR UsuarioServicio:66 - Usuario con id: 5 no encontrado
+2024-10-07 20:41:03 TRACE UsuarioServicio:70 - ***************** Salimos de deleteUser ********************
+2024-10-07 20:41:03 TRACE UsuarioServicio:32 - ********************** Entramos en getUser *************************
+2024-10-07 20:41:03 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:41:03 TRACE UsuarioServicio:39 - ************************* Salimos de getUser *************************
+2024-10-07 20:41:03 INFO  Main:28 - Cambio en Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:41:03 INFO  Main:29 - ****************** App finalizada ******************
+2024-10-07 20:43:10 INFO  Main:9 - ************ Comienza la App *************
+2024-10-07 20:43:10 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:10 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:10 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:10 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:10 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:10 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:10 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:46 - 
+Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:10 INFO  UsuarioServicio:56 - Usuario updateado: Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:58 - Salimos de updateUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:46 - 
+Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:10 WARN  UsuarioServicio:50 - Usuario con Id: 4 no existe
+2024-10-07 20:43:10 TRACE UsuarioServicio:51 - Salimos de updateUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:62 - 
+Entramos en deleteUser ********************
+2024-10-07 20:43:10 INFO  UsuarioServicio:68 - Usuario con id: Usuario(id=3, nombre=Manue, email=manue@gmail.com) eliminado
+2024-10-07 20:43:10 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:10 TRACE UsuarioServicio:62 - 
+Entramos en deleteUser ********************
+2024-10-07 20:43:10 ERROR UsuarioServicio:66 - Usuario con id: 5 no encontrado
+2024-10-07 20:43:10 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:10 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:10 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:10 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:10 INFO  Main:28 - Cambio en Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:10 INFO  Main:29 - ****************** App finalizada ******************
+2024-10-07 20:43:22 INFO  Main:9 - ************ Comienza la App *************
+2024-10-07 20:43:22 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:22 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:22 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:22 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:22 TRACE UsuarioServicio:17 - 
+Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:22 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:22 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:46 - 
+Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:22 INFO  UsuarioServicio:56 - Usuario updateado: Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:58 - Salimos de updateUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:46 - 
+Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:22 WARN  UsuarioServicio:50 - Usuario con Id: 4 no existe
+2024-10-07 20:43:22 TRACE UsuarioServicio:51 - Salimos de updateUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:62 - 
+Entramos en deleteUser ********************
+2024-10-07 20:43:22 INFO  UsuarioServicio:68 - Usuario con id: Usuario(id=3, nombre=Manue, email=manue@gmail.com) eliminado
+2024-10-07 20:43:22 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:22 TRACE UsuarioServicio:62 - 
+Entramos en deleteUser ********************
+2024-10-07 20:43:22 ERROR UsuarioServicio:66 - Usuario con id: 5 no encontrado
+2024-10-07 20:43:22 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:22 TRACE UsuarioServicio:32 - 
+Entramos en getUser *************************
+2024-10-07 20:43:22 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:22 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:22 INFO  Main:28 - Cambio en Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:22 INFO  Main:29 - ****************** App finalizada ******************
+2024-10-07 20:43:50 INFO  Main:9 - ************ Comienza la App *************
+2024-10-07 20:43:50 TRACE UsuarioServicio:17 - 	Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:50 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:50 TRACE UsuarioServicio:17 - 	Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:50 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:50 TRACE UsuarioServicio:17 - 	Entramos en le metodo crearUsuario ************************
+2024-10-07 20:43:50 INFO  UsuarioServicio:25 - Usuario creado: Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:27 - Salimos del metodo crearUsuario *********************
+2024-10-07 20:43:50 TRACE UsuarioServicio:32 - 	Entramos en getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pablo, email=pablo@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:32 - 	Entramos en getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=2, nombre=Juan, email=juan@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:32 - 	Entramos en getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=3, nombre=Manue, email=manue@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:46 - 	Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:50 INFO  UsuarioServicio:56 - Usuario updateado: Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:58 - Salimos de updateUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:46 - 	Entramos en le metodo updateUsuario ************************
+2024-10-07 20:43:50 WARN  UsuarioServicio:50 - Usuario con Id: 4 no existe
+2024-10-07 20:43:50 TRACE UsuarioServicio:51 - Salimos de updateUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:62 - 	Entramos en deleteUser ********************
+2024-10-07 20:43:50 INFO  UsuarioServicio:68 - Usuario con id: Usuario(id=3, nombre=Manue, email=manue@gmail.com) eliminado
+2024-10-07 20:43:50 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:50 TRACE UsuarioServicio:62 - 	Entramos en deleteUser ********************
+2024-10-07 20:43:50 ERROR UsuarioServicio:66 - Usuario con id: 5 no encontrado
+2024-10-07 20:43:50 TRACE UsuarioServicio:70 - Salimos de deleteUser ********************
+2024-10-07 20:43:50 TRACE UsuarioServicio:32 - 	Entramos en getUser *************************
+2024-10-07 20:43:50 TRACE UsuarioServicio:37 - Usuario encontrado Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:50 TRACE UsuarioServicio:39 - Salimos de getUser *************************
+2024-10-07 20:43:50 INFO  Main:28 - Cambio en Usuario(id=1, nombre=Pedro leon, email=pl@gmail.com)
+2024-10-07 20:43:50 INFO  Main:29 - ****************** App finalizada ******************

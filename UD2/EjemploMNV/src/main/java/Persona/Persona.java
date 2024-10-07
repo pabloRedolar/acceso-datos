@@ -6,11 +6,11 @@ import lombok.Data;
 @Builder
 @Data
 public class Persona {
-    String nombre;
-    int edad;
-    String apellidos;
-    String dni;
-    String direccion;
+    private String nombre;
+    private int edad;
+    private String apellidos;
+    private String dni;
+    private String direccion;
 }
 
 
