@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ejercicios.iml" filepath="$PROJECT_DIR$/.idea/Ejercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosApiStream/EjerciciosApiStream.iml" filepath="$PROJECT_DIR$/EjerciciosApiStream/EjerciciosApiStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosConLambda/EjerciciosConLambda.iml" filepath="$PROJECT_DIR$/EjerciciosConLambda/EjerciciosConLambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosTipoExamen/EjerciciosTipoExamen.iml" filepath="$PROJECT_DIR$/EjerciciosTipoExamen/EjerciciosTipoExamen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjersListSetMap/EjersListSetMap.iml" filepath="$PROJECT_DIR$/EjersListSetMap/EjersListSetMap.iml" />
+    </modules>
+  </component>
+</project>

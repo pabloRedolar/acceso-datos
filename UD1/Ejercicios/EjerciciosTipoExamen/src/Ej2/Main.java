@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        String origen = "texto.txt";
+        String origen = "src/Ej2/texto.txt";
         String archivoRemplazo = "textoNuevo.txt";
         String cadenaBuscar = "Mancha";
         String cadenaRemplazar = "teruel";
