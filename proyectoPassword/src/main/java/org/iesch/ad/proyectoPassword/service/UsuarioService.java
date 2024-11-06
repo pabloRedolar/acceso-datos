@@ -20,8 +20,8 @@ public class UsuarioService {
         return usuarios;
     }
 
-    public LocalDateTime addUsuario(UsuarioDTO usuarioDTO){
-        if (compruebaContrasenna(usuarioDTO.getPassword())){
+    public LocalDateTime addUsuario(UsuarioDTO usuarioDTO) {
+        if (compruebaContrasenna(usuarioDTO.getPassword())) {
             Usuario usuario = new Usuario(usuarioDTO.getUsername(), usuarioDTO.getPassword());
             usuarios.add(usuario);
             return usuario.getValidoHasta();
@@ -31,12 +31,12 @@ public class UsuarioService {
     }
 
     private boolean compruebaContrasenna(String password) {
-        return password.length() > 8 && password.matches(".*[A-Za-z].*") ;
+        return password.length() > 8 && password.matches(".*[A-Za-z].*");
     }
 
     public boolean login(UsuarioDTO usuarioDTO) {
-        String hashPass = DigestUtils.md5DigestAsHex((usuarioDTO.getPassword()+"a36sf").getBytes());
-        usuarios.stream().anyMatch(usuario -> usuario.getUsername().equals(usuarioDTO.getUsername() && usuario.getPassword().equals(hashPass)));
+        String hashPass = DigestUtils.md5DigestAsHex((usuarioDTO.getPassword() + "a36sf").getBytes());
+        usuarios.stream().anyMatch(usuario -> usuario.getUsername().equals(usuarioDTO.getUsername().equals(usuario.getUsername()) && usuario.getPassword().equals(hashPass)));
         return false;
 
     }
