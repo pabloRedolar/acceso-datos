@@ -1,0 +1,20 @@
+package iesch.org.ad.exampleBBDD.model.uni_manyToOne;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+import java.util.List;
+
+@Entity
+@Data
+public class Estudiante {
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private long id;
+    private String nombre;
+
+    @ManyToMany
+    @JoinTable (name = "estudiante_cursos", joinColumns = @JoinColumn (name = "id_estudiante"), inverseJoinColumns = @JoinColumn (name = "id_curso"))
+
+    private List<Curso> cursos;
+}

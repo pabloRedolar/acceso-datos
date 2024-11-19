@@ -18,7 +18,4 @@ public class Usuario {
     String ip_address;
     String dni;
 
-//    @OneToOne
-//    Perfil perfil;
-
 }
