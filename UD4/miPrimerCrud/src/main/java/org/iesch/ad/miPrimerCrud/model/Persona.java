@@ -10,8 +10,13 @@ import lombok.Data;
 @Data
 public class Persona {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
     private String apellido;
+    private String email;
+    private String telefono;
+    private String direccion;
+    private String ciudad;
+    private String dni;
 }
