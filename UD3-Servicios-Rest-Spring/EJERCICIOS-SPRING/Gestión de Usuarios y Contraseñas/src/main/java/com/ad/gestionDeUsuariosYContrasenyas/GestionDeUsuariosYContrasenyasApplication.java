@@ -1,0 +1,13 @@
+package com.ad.gestionDeUsuariosYContrasenyas;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GestionDeUsuariosYContrasenyasApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GestionDeUsuariosYContrasenyasApplication.class, args);
+	}
+
+}
