@@ -1,8 +1,7 @@
-package iesch.org.ad.exampleBBDD.model;
+package iesch.org.ad.exampleBBDD.model.ejemplos;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Entity

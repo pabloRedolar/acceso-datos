@@ -8,11 +8,11 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>iesch.org.ad</groupId>
-	<artifactId>Ejercicios01</artifactId>
+	<groupId>org.iesch.ad</groupId>
+	<artifactId>Ejercicios02</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Ejercicios01</name>
-	<description>Ejercicios diseño de bases de datos</description>
+	<name>Ejercicios02</name>
+	<description>Ejercicios 02 diseño base datos</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,12 +38,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-<!--		<dependency>-->
-<!--			<groupId>org.mariadb.jdbc</groupId>-->
-<!--			<artifactId>mariadb-java-client</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
 
 		<dependency>
 			<groupId>com.mysql</groupId>

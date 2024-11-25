@@ -1,4 +1,4 @@
-package iesch.org.ad.exampleBBDD.model;
+package iesch.org.ad.exampleBBDD.model.ejemplos;
 
 import jakarta.persistence.*;
 import lombok.Data;
