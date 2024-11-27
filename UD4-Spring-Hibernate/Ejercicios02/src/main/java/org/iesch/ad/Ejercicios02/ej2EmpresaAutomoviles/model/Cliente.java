@@ -1,5 +1,7 @@
 package org.iesch.ad.Ejercicios02.ej2EmpresaAutomoviles.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,6 +22,10 @@ public class Cliente {
     private String telefono;
 
     @OneToMany (mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+
+//    @JoinColumn(name = "cliente_id")
+    //@JsonIgnoreProperties("coches")
+    @JsonIgnore
     private Set<Coche> coches = new HashSet<>();
 
 }

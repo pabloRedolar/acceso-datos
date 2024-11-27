@@ -13,7 +13,7 @@ public class Revision {
     private boolean cambioFiltro;
     private boolean cambioAceite;
 
-    @ManyToOne
-    @JoinColumn (name = "coche_id")
-    private Coche coche;
+//    @ManyToOne
+//    @JoinColumn (name = "coche_id")
+//    private Coche coche;
 }
