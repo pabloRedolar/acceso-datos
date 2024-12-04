@@ -1,5 +1,6 @@
 package org.iesch.ad.EjJPA02.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -19,6 +20,6 @@ public class Revision {
     @ManyToOne
     @JoinColumn(name = "coche_id")
 
-    @JsonManagedReference
+    @JsonBackReference
     private Coche coche;
 }
