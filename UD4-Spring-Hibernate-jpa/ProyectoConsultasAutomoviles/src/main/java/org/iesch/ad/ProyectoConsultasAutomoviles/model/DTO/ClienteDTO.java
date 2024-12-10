@@ -1,21 +1,22 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO;
 
-import lombok.*;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
 
 public class ClienteDTO {
-    //    private long id;
     private String nif;
     private String nombre;
     private String apellidos;
     private String direccion;
     private String ciudad;
     private String telefono;
+
+    public ClienteDTO(String nif, String nombre, String ciudad) {
+        this.nif = nif;
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+    }
+
+    public ClienteDTO() {
+    }
 
     public String getNif() {
         return nif;
@@ -64,4 +65,5 @@ public class ClienteDTO {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
 }

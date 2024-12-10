@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/cliente")
 @RestController
+@RequestMapping("/cliente")
+
 public class ClienteController {
     @Autowired
     private ClienteService clienteService;
@@ -33,9 +34,20 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.borrarCliente(id));
     }
 
+    // ******************************** Ejercicios consultas ***************************************
 
     @GetMapping("/clientesCocheColor")
     public ResponseEntity<?> getClientesCochesColor(@RequestParam String color) {
         return ResponseEntity.ok(clienteService.getClientesCochesPorColor(color));
+    }
+
+    @GetMapping("/por-precio")
+    public ResponseEntity<?> getClientesCochePrecioMayorX(@RequestParam Float precio) {
+        return ResponseEntity.ok(clienteService.getClientesCochePrecioMayorX(precio));
+    }
+
+    @GetMapping("mas-coches")
+    public ResponseEntity<?> getAtributosClienteConMasCoches() {
+        return ResponseEntity.ok(clienteService.getAtributosClienteConMasCoches());
     }
 }

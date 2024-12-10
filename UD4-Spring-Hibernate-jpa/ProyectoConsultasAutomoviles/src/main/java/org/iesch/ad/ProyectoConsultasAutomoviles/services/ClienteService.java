@@ -1,15 +1,14 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.services;
 
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.Cliente;
-import org.iesch.ad.ProyectoConsultasAutomoviles.model.Coche;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.ClienteRepository;
 import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.CocheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class ClienteService {
@@ -82,5 +81,28 @@ public class ClienteService {
     public List<Cliente> getClientesCochesPorColor(String color) {
 
         return clienteRepository.findDistinctByCochesColor(color);
+    }
+
+    public Object getClientesCochePrecioMayorX(Float precio) {
+        List<Cliente> clientes = clienteRepository.findClientesByCochesPrecioGreaterThan(precio);
+
+        return clientes;
+    }
+
+    public Object getAtributosClienteConMasCoches() {
+        List<ClienteDTO> clientes = clienteRepository.getClientesConMasCoches();
+
+//        List<ClienteDTO> clienteDTOS = new ArrayList<>();
+//
+//        for (Cliente cliente : clientes) {
+//            ClienteDTO clienteDTO = new ClienteDTO();
+//            clienteDTO.setNif(cliente.getNif());
+//            clienteDTO.setNombre(cliente.getNombre());
+//            clienteDTO.setCiudad(cliente.getCiudad());
+//
+//            clienteDTOS.add(clienteDTO);
+//        }
+
+        return clientes;
     }
 }
