@@ -1,0 +1,15 @@
+meta {
+  name: DeleteUsuarioPorId
+  type: http
+  seq: 1
+}
+
+delete {
+  url: http://localhost:8080/cliente/borrarPorId?id=7
+  body: none
+  auth: none
+}
+
+params:query {
+  id: 7
+}

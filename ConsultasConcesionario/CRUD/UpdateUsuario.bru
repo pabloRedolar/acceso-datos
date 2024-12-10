@@ -1,0 +1,26 @@
+meta {
+  name: UpdateUsuario
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/cliente/actualizarUsuario?id=1
+  body: json
+  auth: none
+}
+
+params:query {
+  id: 1
+}
+
+body:json {
+  {
+    "nombre": "Pablo",
+    "apellidos": "Redolar Sanchez",
+    "direccion": "Calle urbanizacion, 36",
+    "ciudad": "Ilinois",
+    "telefono": "659981050",
+    "nif": "18456278C"
+  }
+}

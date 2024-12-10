@@ -1,0 +1,22 @@
+meta {
+  name: CreateUsuario
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/cliente/crearUsuario
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nif": "18456278C",
+    "nombre": "Pablo",
+    "apellidos": "Redolar Sanchez",
+    "direccion": "Calle urbanizacion, 36",
+    "ciudad": "Teruel",
+    "telefono": "659981050"
+  }
+}
