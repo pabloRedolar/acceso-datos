@@ -1,5 +1,6 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.controllers;
 
+import jakarta.websocket.server.PathParam;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.borrarCliente(id));
     }
 
-    // ******************************** Ejercicios consultas ***************************************
+    // ********************************** Ejercicios consultas ***************************************
 
     @GetMapping("/clientesCocheColor")
     public ResponseEntity<?> getClientesCochesColor(@RequestParam String color) {
@@ -49,5 +50,20 @@ public class ClienteController {
     @GetMapping("mas-coches")
     public ResponseEntity<?> getAtributosClienteConMasCoches() {
         return ResponseEntity.ok(clienteService.getAtributosClienteConMasCoches());
+    }
+
+//    @GetMapping("mas-coches")
+//    public ResponseEntity<?> getAtributosClienteConMasCoches() {
+//        return ResponseEntity.ok(clienteService.getAtributosClienteConMasCoches());
+//    }
+
+    @GetMapping("/por-matricula")
+    public ResponseEntity<?> getClientePorMatricula(@RequestParam String matricula) {
+        return ResponseEntity.ok(clienteService.getClientePorMatricula(matricula));
+    }
+
+    @GetMapping("/codigo-por-matricula")
+    public ResponseEntity<?> getClientePorCodigoRevision(@RequestParam String codigoInterno) {
+        return ResponseEntity.ok(clienteService.getClientePorCodigoRevision(codigoInterno));
     }
 }

@@ -1,6 +1,7 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +22,7 @@ public class Coche {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "coche", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private Set<Revision> revisiones = new HashSet<>();
 
     public String getMatricula() {

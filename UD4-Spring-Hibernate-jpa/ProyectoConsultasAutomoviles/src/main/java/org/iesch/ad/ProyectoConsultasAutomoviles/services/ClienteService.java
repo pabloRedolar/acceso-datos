@@ -7,7 +7,6 @@ import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.CocheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,8 +14,6 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    @Autowired
-    private CocheRepository cocheRepository;
 
     public Boolean crearUsuario(ClienteDTO clienteDTO) {
 
@@ -27,11 +24,11 @@ public class ClienteService {
         Cliente cliente = new Cliente();
 
         cliente.setNombre(clienteDTO.getNombre());
-        cliente.setApellidos(clienteDTO.getApellidos());
+//        cliente.setApellidos(clienteDTO.getApellidos());
         cliente.setCiudad(clienteDTO.getCiudad());
-        cliente.setDireccion(clienteDTO.getDireccion());
+//        cliente.setDireccion(clienteDTO.getDireccion());
         cliente.setNif(clienteDTO.getNif());
-        cliente.setTelefono(clienteDTO.getTelefono());
+//        cliente.setTelefono(clienteDTO.getTelefono());
 
 
         try {
@@ -66,10 +63,10 @@ public class ClienteService {
 
             cliente.setNif(clienteDTO.getNif());
             cliente.setNombre(clienteDTO.getNombre());
-            cliente.setApellidos(clienteDTO.getApellidos());
-            cliente.setTelefono(clienteDTO.getTelefono());
+//            cliente.setApellidos(clienteDTO.getApellidos());
+//            cliente.setTelefono(clienteDTO.getTelefono());
             cliente.setCiudad(clienteDTO.getCiudad());
-            cliente.setDireccion(clienteDTO.getDireccion());
+//            cliente.setDireccion(clienteDTO.getDireccion());
 
             clienteRepository.save(cliente);
             return cliente;
@@ -104,5 +101,35 @@ public class ClienteService {
 //        }
 
         return clientes;
+    }
+
+    public ClienteDTO getClientePorMatricula(String matricula) {
+        Cliente cliente = clienteRepository.getClientePorMatricula(matricula);
+
+        ClienteDTO clienteDTO = new ClienteDTO();
+        clienteDTO.setNombre(cliente.getNombre());
+        clienteDTO.setNif(cliente.getNif());
+        clienteDTO.setApellidos(cliente.getApellidos());
+        clienteDTO.setCiudad(cliente.getCiudad());
+        clienteDTO.setDireccion(cliente.getDireccion());
+        clienteDTO.setTelefono(cliente.getTelefono());
+
+        return clienteDTO;
+    }
+
+    public Object getClientePorCodigoRevision(String codigoInterno) {
+        Cliente cliente = clienteRepository.getClientePorCodigoRevision(codigoInterno);
+
+        ClienteDTO clienteDTO = new ClienteDTO(
+                cliente.getNif(),
+                cliente.getNombre(),
+                cliente.getApellidos(),
+                cliente.getCiudad(),
+                cliente.getDireccion(),
+                cliente.getTelefono()
+        );
+
+        return clienteDTO;
+
     }
 }

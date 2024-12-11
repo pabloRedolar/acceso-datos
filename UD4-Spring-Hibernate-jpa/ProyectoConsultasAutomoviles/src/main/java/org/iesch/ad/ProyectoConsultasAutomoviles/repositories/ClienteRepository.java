@@ -4,6 +4,7 @@ import org.iesch.ad.ProyectoConsultasAutomoviles.model.Cliente;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -32,4 +33,12 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
             "FROM Cliente c WHERE SIZE(c.coches) = (SELECT MAX(SIZE(cli.coches)) FROM Cliente cli)")
 
     List<ClienteDTO> getClientesConMasCoches();
+
+
+    @Query("SELECT c FROM Cliente c JOIN FETCH c.coches co WHERE co.matricula = :matricula")
+    Cliente getClientePorMatricula(String matricula);
+
+    @Query("SELECT c FROM Cliente c JOIN FETCH c.coches co JOIN FETCH co.revisiones revs WHERE revs.codigo = :codigoInterno")
+    Cliente getClientePorCodigoRevision(String codigoInterno);
+
 }

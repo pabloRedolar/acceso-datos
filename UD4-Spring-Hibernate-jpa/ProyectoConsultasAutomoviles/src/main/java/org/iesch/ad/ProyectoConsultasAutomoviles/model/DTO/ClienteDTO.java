@@ -1,5 +1,9 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
 
 public class ClienteDTO {
     private String nif;
@@ -8,6 +12,15 @@ public class ClienteDTO {
     private String direccion;
     private String ciudad;
     private String telefono;
+
+    public ClienteDTO(String nif, String nombre, String apellidos, String direccion, String ciudad, String telefono) {
+        this.nif = nif;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.direccion = direccion;
+        this.ciudad = ciudad;
+        this.telefono = telefono;
+    }
 
     public ClienteDTO(String nif, String nombre, String ciudad) {
         this.nif = nif;
