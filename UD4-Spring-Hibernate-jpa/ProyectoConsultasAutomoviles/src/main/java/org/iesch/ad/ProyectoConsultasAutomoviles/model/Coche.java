@@ -21,7 +21,7 @@ public class Coche {
     @JsonBackReference
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "coche", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "coche")
     @JsonManagedReference
     private Set<Revision> revisiones = new HashSet<>();
 

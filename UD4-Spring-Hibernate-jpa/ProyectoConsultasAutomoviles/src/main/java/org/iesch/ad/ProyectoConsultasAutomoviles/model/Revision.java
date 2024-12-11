@@ -13,7 +13,7 @@ public class Revision {
     private Boolean cambioFiltro;
     private Boolean cambioAceite;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "id_coche")
     @JsonBackReference
     private Coche coche;

@@ -66,4 +66,10 @@ public class ClienteController {
     public ResponseEntity<?> getClientePorCodigoRevision(@RequestParam String codigoInterno) {
         return ResponseEntity.ok(clienteService.getClientePorCodigoRevision(codigoInterno));
     }
+
+    @GetMapping("/por-codigo-revision-detalles")
+    public ResponseEntity<?> getClienteSinCochesPorCodigoRevision(@RequestParam String codigo) {
+        return ResponseEntity.ok(clienteService.getClienteSinCochesPorCodigoRevision(codigo));
+
+    }
 }

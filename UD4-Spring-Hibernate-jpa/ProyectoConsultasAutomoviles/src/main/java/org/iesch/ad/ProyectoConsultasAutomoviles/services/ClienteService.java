@@ -2,6 +2,7 @@ package org.iesch.ad.ProyectoConsultasAutomoviles.services;
 
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.Cliente;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
+import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.ClienteRepository;
 import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.CocheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -131,5 +132,10 @@ public class ClienteService {
 
         return clienteDTO;
 
+    }
+
+    public ClienteSinCochesDTO getClienteSinCochesPorCodigoRevision(String codigo) {
+
+        return clienteRepository.getClienteSinCochesPorCodigoRevision(codigo);
     }
 }
