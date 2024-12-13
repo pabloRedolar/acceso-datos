@@ -1,8 +1,11 @@
 package org.iesch.ad.ProyectoRepasoFinal.model.DTOs;
 
+
 import lombok.Data;
 
 import java.util.Date;
+
+@Data
 
 public class ErrorDTO {
     private String error;
