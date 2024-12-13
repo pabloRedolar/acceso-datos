@@ -1,6 +1,7 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.repositories;
 
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.Cliente;
+import org.iesch.ad.ProyectoConsultasAutomoviles.model.Coche;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -46,14 +47,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 //    @Query("SELECT c.nif FROM Cliente c JOIN c.coches co JOIN co.revisiones rev WHERE rev.codigo = :codigo")
 
-    @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c2.nif, c2.nombre, count(co2), sum(co2.precio))" +
-            "FROM Cliente c2 " +
-            "JOIN c2.coches co2 " +
-            "WHERE c2.nif = (SELECT c.nif " +
-                "FROM Cliente c " +
-                "JOIN c.coches co " +
-                "JOIN co.revisiones rev " +
-                "WHERE rev.codigo = :codigo) group by c2")
+    @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c2.nif, c2.nombre, count(co2), sum(co2.precio))" + "FROM Cliente c2 " + "JOIN c2.coches co2 " + "WHERE c2.nif = (SELECT c.nif " + "FROM Cliente c " + "JOIN c.coches co " + "JOIN co.revisiones rev " + "WHERE rev.codigo = :codigo) group by c2")
 
 //            @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c.nif, c.nombre, size(c.coches), sum(co.precio)) " +
 //            "FROM Cliente c " +
@@ -74,4 +68,22 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
     ClienteSinCochesDTO getClienteSinCochesPorCodigoRevision(String codigo);
 //    ClienteSinCochesDTO getClienteSinCochesPorCodigoRevision(String codigo);
+
+
+    // *****************************************************************************************
+
+    List<Cliente> findClientesByCochesIsEmpty();
+
+    @Query("select c from Coche c where size(c.revisiones) < 2")
+    List<Coche> cochesSinRevision();
+
+    @Query("select c from Coche c where c.precio = (select max(c.precio) from Coche c)")
+    Coche cocheMasCaro();
+
+
+    @Query("select c from Coche c JOIN fetch c.revisiones rev join fetch c.cliente cl " +
+            "where rev.cambioAceite = true and rev.cambioFiltro = true")
+    List<Object> cocheConRevisiones();
+
+
 }

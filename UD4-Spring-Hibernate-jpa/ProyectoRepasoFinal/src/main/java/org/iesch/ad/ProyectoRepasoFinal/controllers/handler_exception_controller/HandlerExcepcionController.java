@@ -38,4 +38,6 @@ public class HandlerExcepcionController {
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).body(errorDTO);
     }
+
+    
 }

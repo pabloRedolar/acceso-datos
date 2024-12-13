@@ -13,4 +13,6 @@ public interface CocheRepository extends JpaRepository<Coche, String> {
 //    @Query("SELECT r.coche.matricula, count(r) FROM Revision r GROUP BY r.coche")
     @Query("SELECT c.matricula, size(c.revisiones) FROM Coche c")
     List<Object> cochesMatriculaRevisiones();
+
+
 }

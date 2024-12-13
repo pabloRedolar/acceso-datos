@@ -1,10 +1,10 @@
 package org.iesch.ad.ProyectoConsultasAutomoviles.services;
 
+import org.iesch.ad.ProyectoConsultasAutomoviles.exceptions.ClienteInexistente;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.Cliente;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO;
 import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.ClienteRepository;
-import org.iesch.ad.ProyectoConsultasAutomoviles.repositories.CocheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +43,14 @@ public class ClienteService {
     }
 
     public Object buscarUsuario(String nombre, String apellidos) {
-        return clienteRepository.findClienteByNombreAndApellidos(nombre, apellidos);
+
+        List<Cliente> clientes = clienteRepository.findClienteByNombreAndApellidos(nombre, apellidos);
+
+        if (clientes.isEmpty()) {
+            throw new ClienteInexistente("Error cliente no encontrado");
+        }
+
+        return clientes;
     }
 
 

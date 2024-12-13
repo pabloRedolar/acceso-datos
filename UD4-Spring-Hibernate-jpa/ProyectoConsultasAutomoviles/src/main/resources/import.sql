@@ -5,6 +5,13 @@ insert into cliente (id, nif, nombre, apellidos, direccion, ciudad, telefono) va
 insert into cliente (id, nif, nombre, apellidos, direccion, ciudad, telefono) values (5, '48034514U', 'Deanne Bowkley', 'Anderson', '6722 Sullivan Street', 'Kankan', '664113953');
 
 
+insert into cliente (id, nif, nombre, apellidos, direccion, ciudad, telefono) values (6, '18456278C', 'Pablo', 'Redolar', 'Calle plano alto, 36', 'Teruel', '659981050');
+
+insert into coche (matricula, marca, modelo, color, precio, cliente_id) values ('9109-GNP', 'Seat', 'Ibiza', 'Red', 6000.00, 6);
+
+insert into revision (codigo, cambio_filtro, cambio_aceite, id_coche) values ('10300', 1, 1, '9109-GNP');
+
+
 insert into coche (matricula, marca, modelo, color, precio, cliente_id) values ('9074-ERP', 'Toyota', 'Corolla', 'Purple', 1532.75, 1);
 insert into coche (matricula, marca, modelo, color, precio, cliente_id) values ('4010-SKM', 'Hummer', 'H3', 'Orange', 2295.65, 1);
 insert into coche (matricula, marca, modelo, color, precio, cliente_id) values ('8517-HZX', 'Subaru', 'SVX', 'Green', 1955.36, 1);
