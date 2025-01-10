@@ -1,5 +1,7 @@
 package org.iesch.ad.Ejer.prueba._ev.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.iesch.ad.Ejer.prueba._ev.models.DTOs.ProductoDTO;
 import org.iesch.ad.Ejer.prueba._ev.models.DTOs.ProductoDTOConverter;
 import org.iesch.ad.Ejer.prueba._ev.models.Producto;
@@ -14,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/")
-
+@RequestMapping("/api")
+@Tag(name = "Productos", description = "Api para la gestion de productos")
 public class ControllerProducto {
     @Autowired
     RepositorioProducto repositorioProducto;
@@ -23,6 +25,8 @@ public class ControllerProducto {
     @Autowired
     ProductoDTOConverter productoDTOConverter;
 
+    @Operation(summary = "Buscar todos lo productos")
+    @CrossOrigin(origins = "")
     @GetMapping("productos")
     public ResponseEntity<?> getProductos() {
         List<Producto> resultado = repositorioProducto.findAll();
@@ -32,6 +36,7 @@ public class ControllerProducto {
         return ResponseEntity.ok(resultado);
     }
 
+    @Operation(summary = "Obtener todos productos a traves de un DTO")
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("productoDTO")
     public ResponseEntity<?> obtenerTodosMedianteDTO() {
@@ -45,5 +50,10 @@ public class ControllerProducto {
             return ResponseEntity.ok(resultadoDTO);
         }
 
+    }
+
+    @GetMapping("/saluda")
+    public ResponseEntity<?> saluda() {
+        return ResponseEntity.ok("Holiiiiiiiiiii");
     }
 }

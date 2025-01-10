@@ -10,19 +10,21 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MiConfig {
 
     @Bean
-    public ModelMapper modelMapper(){
+    public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/productoDTO/**").allowedOrigins("**");
-            }
-        };
-    }
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurer() {
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/api/productoDTO/**")
+//                        .allowedOrigins("**")
+//                        .allowedMethods("GET")
+//                        .maxAge(3600);
+//            }
+//        };
+//    }
 
 }
