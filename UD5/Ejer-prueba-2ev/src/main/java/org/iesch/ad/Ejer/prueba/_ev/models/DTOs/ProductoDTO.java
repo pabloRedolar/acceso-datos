@@ -4,6 +4,15 @@ public class ProductoDTO {
     private String nombre;
     private Long id;
     private String categoriaNombre;
+    private Float precio;
+
+    public Float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Float precio) {
+        this.precio = precio;
+    }
 
     public String getNombre() {
         return nombre;

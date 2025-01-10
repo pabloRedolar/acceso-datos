@@ -1,0 +1,28 @@
+meta {
+  name: post16
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/api/tenistas
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "nombre": "Manuel",
+      "email": "manuel@gmail.com"
+    },
+    {
+      "nombre": "Pablo",
+      "email": "pablo@gmail.com"
+    },
+    {
+      "nombre": "Juan",
+      "email": "juanl@gmail.com"
+    }
+  ]
+}
