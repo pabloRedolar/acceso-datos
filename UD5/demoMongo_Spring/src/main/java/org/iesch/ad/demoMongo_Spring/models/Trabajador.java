@@ -7,19 +7,21 @@ import java.time.LocalDate;
 @Document
 public class Trabajador {
     @Id
-
     private String id;
     private String nombre;
     private String apellidos;
     private String email;
     private LocalDate fechaNacimiento;
 
-    public Trabajador(String id, String nombre, String apellidos, String email, LocalDate fechaNacimiento) {
+    private Integer altura;
+
+    public Trabajador(String id, String nombre, String apellidos, String email, LocalDate fechaNacimiento, Integer altura) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
+        this.altura = altura;
     }
 
     public String getId() {
@@ -58,6 +60,14 @@ public class Trabajador {
         return fechaNacimiento;
     }
 
+    public Integer getAltura() {
+        return altura;
+    }
+
+    public void setAltura(Integer altura) {
+        this.altura = altura;
+    }
+
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
@@ -70,6 +80,7 @@ public class Trabajador {
                 ", apellidos='" + apellidos + '\'' +
                 ", email='" + email + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
+                ", altura=" + altura +
                 '}';
     }
 }
