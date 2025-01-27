@@ -1,0 +1,166 @@
+meta {
+  name: PostPersonas
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/persona
+  body: json
+  auth: none
+}
+
+body:json {
+  [
+    {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "edad": 28,
+      "ciudad": "Madrid",
+      "intereses": [
+        "música",
+        "deportes"
+      ],
+      "direccion": {
+        "calle": "Calle Mayor",
+        "numero": 10,
+        "ciudad": "Madrid"
+      }
+    },
+    {
+      "nombre": "María",
+      "apellido": "García",
+      "edad": 24,
+      "ciudad": "Barcelona",
+      "intereses": [
+        "lectura",
+        "viajes"
+      ],
+      "direccion": {
+        "calle": "Avenida Diagonal",
+        "numero": 45,
+        "ciudad": "Barcelona"
+      }
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Sánchez",
+      "edad": 35,
+      "ciudad": "Valencia",
+      "intereses": [
+        "cine",
+        "tecnología"
+      ],
+      "direccion": {
+        "calle": "Calle Colón",
+        "numero": 78,
+        "ciudad": "Valencia"
+      }
+    },
+    {
+      "nombre": "Ana",
+      "apellido": "López",
+      "edad": 30,
+      "ciudad": "Sevilla",
+      "intereses": [
+        "música",
+        "arte"
+      ],
+      "direccion": {
+        "calle": "Calle Sierpes",
+        "numero": 12,
+        "ciudad": "Sevilla"
+      }
+    },
+    {
+      "nombre": "Miguel",
+      "apellido": "Martínez",
+      "edad": 40,
+      "ciudad": "Bilbao",
+      "intereses": [
+        "deportes",
+        "gastronomía"
+      ],
+      "direccion": {
+        "calle": "Gran Vía",
+        "numero": 32,
+        "ciudad": "Bilbao"
+      }
+    },
+    {
+      "nombre": "Laura",
+      "apellido": "González",
+      "edad": 27,
+      "ciudad": "Zaragoza",
+      "intereses": [
+        "viajes",
+        "tecnología"
+      ],
+      "direccion": {
+        "calle": "Calle Alfonso",
+        "numero": 20,
+        "ciudad": "Zaragoza"
+      }
+    },
+    {
+      "nombre": "Luis",
+      "apellido": "Fernández",
+      "edad": 32,
+      "ciudad": "Granada",
+      "intereses": [
+        "cine",
+        "lectura"
+      ],
+      "direccion": {
+        "calle": "Calle Navas",
+        "numero": 8,
+        "ciudad": "Granada"
+      }
+    },
+    {
+      "nombre": "Elena",
+      "apellido": "Hernández",
+      "edad": 22,
+      "ciudad": "Murcia",
+      "intereses": [
+        "arte",
+        "deportes"
+      ],
+      "direccion": {
+        "calle": "Calle Platería",
+        "numero": 14,
+        "ciudad": "Murcia"
+      }
+    },
+    {
+      "nombre": "Pedro",
+      "apellido": "Ruiz",
+      "edad": 29,
+      "ciudad": "Santander",
+      "intereses": [
+        "música",
+        "viajes"
+      ],
+      "direccion": {
+        "calle": "Paseo Pereda",
+        "numero": 25,
+        "ciudad": "Santander"
+      }
+    },
+    {
+      "nombre": "Carmen",
+      "apellido": "Romero",
+      "edad": 33,
+      "ciudad": "Málaga",
+      "intereses": [
+        "gastronomía",
+        "arte"
+      ],
+      "direccion": {
+        "calle": "Calle Larios",
+        "numero": 5,
+        "ciudad": "Málaga"
+      }
+    }
+  ]
+}
