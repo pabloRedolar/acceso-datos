@@ -1,4 +1,4 @@
-package org.iesch.ad.CRUD_Mongo.controllest;
+package org.iesch.ad.CRUD_Mongo.controllers;
 
 import org.iesch.ad.CRUD_Mongo.models.Persona;
 import org.iesch.ad.CRUD_Mongo.services.PersonaUsingTemplateService;

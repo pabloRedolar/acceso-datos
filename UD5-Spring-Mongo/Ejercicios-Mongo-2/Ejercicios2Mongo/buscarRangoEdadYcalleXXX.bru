@@ -1,0 +1,18 @@
+meta {
+  name: buscarRangoEdadYcalleXXX
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/personas/buscarRangoEdadYcalleXXX?edadMinima=1&edadMaxima=100&calle=Calle Colón&numero=78
+  body: none
+  auth: none
+}
+
+params:query {
+  edadMinima: 1
+  edadMaxima: 100
+  calle: Calle Colón
+  numero: 78
+}

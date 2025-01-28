@@ -1,6 +1,5 @@
 package org.iesch.ad.crudpersonas.models;
 
-import org.iesch.ad.crudpersonas.models.Direccion;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,31 +8,34 @@ import java.util.List;
 @Document
 public class Persona {
     @Id
-    private Long id;
+    private String id;
     private String nombre;
-    private String apellidos;
+    private String apellido;
     private int edad;
     private List<String> intereses;
+
+    private String ciudad;
 
     private Direccion direccion;
 
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellidos, int edad, List<String> intereses, Direccion direccion) {
+    public Persona(String id, String nombre, String apellido, int edad, List<String> intereses, String ciudad, Direccion direccion) {
         this.id = id;
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
         this.edad = edad;
         this.intereses = intereses;
+        this.ciudad = ciudad;
         this.direccion = direccion;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,12 +47,12 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public int getEdad() {
@@ -75,5 +77,13 @@ public class Persona {
 
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 }

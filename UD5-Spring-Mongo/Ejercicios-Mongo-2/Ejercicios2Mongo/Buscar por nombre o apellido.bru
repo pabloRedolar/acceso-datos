@@ -1,0 +1,16 @@
+meta {
+  name: Buscar por nombre o apellido
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/personas/buscarPorNombreApellido?nombre=Juan&apellido=Fernández
+  body: none
+  auth: none
+}
+
+params:query {
+  nombre: Juan
+  apellido: Fernández
+}
