@@ -1,7 +1,6 @@
 package org.iesch.org.demoGenerateJWT.utilJWT;
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
@@ -16,9 +15,10 @@ import java.util.function.Function;
 
 @Component
 public class JWTutil {
-    private final String passwd = "1q2w3e4r5t6y7u8i9o0p_contraseña_muy_mucho_segura";
+    private final String passwd = "your-256-bit-secret-your-256-bit-secret";
 
-    private SecretKey getSigningKey() {
+
+    public SecretKey getSigningKey() {
         byte[] keyBytes = passwd.getBytes();
 
         return Keys.hmacShaKeyFor(keyBytes);
@@ -58,16 +58,25 @@ public class JWTutil {
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
 
+        claims.put("apellido", "Julve");
+        claims.put("telefono", 456321852);
+        claims.put("direccion", "Calle sin numero, 2");
+        claims.put("dni", "18456278C");
+
         return createToken(claims, username);
     }
 
-    private String createToken(Map<String, Object> claims, String subject) {
+    public String createToken(Map<String, Object> claims, String subject) {
         return Jwts.builder()
                 .claims(claims)
                 .subject(subject)
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 1000*60*60*10))
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
                 .signWith(getSigningKey())
                 .compact();
+    }
+
+    public Boolean validaToken(String token) {
+        return validateToken(token, extractUsername(token));
     }
 }
