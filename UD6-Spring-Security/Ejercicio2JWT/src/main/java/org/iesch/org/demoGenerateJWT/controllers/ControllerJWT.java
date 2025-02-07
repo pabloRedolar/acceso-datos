@@ -66,4 +66,13 @@ public class ControllerJWT {
 
     }
 
+
+    // -----------------------------------**************************************----------------------------------
+
+
+    @GetMapping("/public")
+    public ResponseEntity<?> publicEndPoint() {
+        return ResponseEntity.ok("Esto es un endpoint publico");
+    }
+
 }
