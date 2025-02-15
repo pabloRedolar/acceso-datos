@@ -9,6 +9,9 @@ public class JwtAuthResponse {
         this.tokenType = tokenType;
     }
 
+    public JwtAuthResponse() {
+    }
+
     public String getAccesToken() {
         return accesToken;
     }
