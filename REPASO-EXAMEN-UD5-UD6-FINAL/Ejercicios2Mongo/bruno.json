@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Ejercicios2Mongo",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
