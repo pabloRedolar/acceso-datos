@@ -20,5 +20,4 @@ public class CustomUserDetailsService implements UserDetailsService {
                 () -> new UsernameNotFoundException("No ecite"));
         return userEntity; // Nueva forma
     }
-
 }

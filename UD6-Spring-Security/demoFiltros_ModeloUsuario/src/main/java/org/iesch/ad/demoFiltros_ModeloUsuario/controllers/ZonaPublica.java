@@ -18,5 +18,4 @@ public class ZonaPublica {
 
         return ResponseEntity.ok(hashMap);
     }
-
 }
