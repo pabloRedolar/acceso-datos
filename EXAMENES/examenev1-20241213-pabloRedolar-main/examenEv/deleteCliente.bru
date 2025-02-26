@@ -1,0 +1,17 @@
+meta {
+  name: deleteCliente
+  type: http
+  seq: 8
+}
+
+delete {
+  url: http://192.168.1.200:8069/agenciaviajes/clientes/18456278C
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dni": "18456278C"
+  }
+}

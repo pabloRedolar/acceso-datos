@@ -5,23 +5,20 @@ import org.iesch.ad.EjerciciosBasicosSecurity.repositories.UserEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/UserEntity")
-public class UserEntityController {
+@RequestMapping("/public")
+public class PublicController {
 
     @Autowired
     UserEntityRepository userEntityRepository;
 
-    @PostMapping("/create")
-    public ResponseEntity<?> createUser(@RequestBody UserEntity userEntity) {
+    @GetMapping("/read")
+    public ResponseEntity<?> readUser() {
 
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(userEntityRepository.save(userEntity));
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(userEntityRepository.findAll());
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<?> updateUser(@RequestParam String username, @RequestBody UserEntity userEntity) {
-
-    }
 }

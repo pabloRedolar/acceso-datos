@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "EjersBasicosSeguridad",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
