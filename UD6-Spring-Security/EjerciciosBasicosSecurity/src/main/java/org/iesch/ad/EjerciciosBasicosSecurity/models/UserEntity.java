@@ -29,7 +29,6 @@ public class UserEntity implements UserDetails {
     @CreatedDate
     private LocalDateTime creaccionUsuario;
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream().map(role -> new SimpleGrantedAuthority("ROLE_" + role.name())).toList();
