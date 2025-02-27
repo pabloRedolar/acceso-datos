@@ -25,7 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         UserEntity userEntity = userEntityService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         userEntity.setLastLogin(LocalDateTime.now());
-       userEntityRepository.save(userEntity);
+        userEntityRepository.save(userEntity);
         System.out.println(userEntity);
         return userEntity; // Nueva forma.
     }

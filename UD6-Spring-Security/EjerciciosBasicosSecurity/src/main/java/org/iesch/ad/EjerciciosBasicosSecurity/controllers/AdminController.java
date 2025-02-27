@@ -1,11 +1,14 @@
 package org.iesch.ad.EjerciciosBasicosSecurity.controllers;
 
+import org.iesch.ad.EjerciciosBasicosSecurity.exceptions.UserPasswordException;
 import org.iesch.ad.EjerciciosBasicosSecurity.models.UserEntity;
 import org.iesch.ad.EjerciciosBasicosSecurity.models.UserRole;
 import org.iesch.ad.EjerciciosBasicosSecurity.repositories.UserEntityRepository;
+import org.iesch.ad.EjerciciosBasicosSecurity.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.password.CompromisedPasswordException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -17,21 +20,15 @@ import java.util.Set;
 public class AdminController {
 
     @Autowired
-    UserEntityRepository userEntityRepository;
+    AdminService adminService;
 
     @Autowired
-    PasswordEncoder passwordEncoderConfig;
+    UserEntityRepository userEntityRepository;
 
     @PostMapping("/create")
     public ResponseEntity<?> createUser(@RequestBody UserEntity userEntity) {
 
-            UserEntity user = new UserEntity();
-            user.setPassword(passwordEncoderConfig.encode(userEntity.getPassword()));
-
-            user.setUserRoles(Set.of(UserRole.ADMIN));
-            user.setUsername(userEntity.getUsername());
-
-            return ResponseEntity.status(HttpStatus.ACCEPTED).body(userEntityRepository.save(user));
+        return ResponseEntity.status(HttpStatus.OK).body(adminService.guardarUsuario(userEntity));
 
     }
 
@@ -46,7 +43,9 @@ public class AdminController {
 
         UserEntity entity = userEntityRepository.findById(id).orElseThrow(() -> new UsernameNotFoundException("No se encuentra"));
 
-        entity.setId(id);
+        entity.setUsername(userEntity.getUsername());
+        entity.setPassword(userEntity.getPassword());
+
         userEntityRepository.save(entity);
 
         return ResponseEntity.ok(entity);

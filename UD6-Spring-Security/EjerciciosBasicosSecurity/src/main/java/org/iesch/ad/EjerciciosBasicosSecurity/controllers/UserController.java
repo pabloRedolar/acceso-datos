@@ -1,16 +1,14 @@
 package org.iesch.ad.EjerciciosBasicosSecurity.controllers;
 
-import org.iesch.ad.EjerciciosBasicosSecurity.models.UserEntity;
 import org.iesch.ad.EjerciciosBasicosSecurity.repositories.UserEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/public")
-public class PublicController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
     UserEntityRepository userEntityRepository;

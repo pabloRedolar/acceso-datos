@@ -2,6 +2,7 @@ package org.iesch.ad.EjerciciosBasicosSecurity.models;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 public class UserEntity implements UserDetails {
 
     @Id
@@ -28,6 +30,8 @@ public class UserEntity implements UserDetails {
 
     @CreatedDate
     private LocalDateTime creaccionUsuario;
+
+    private LocalDateTime inicionSesiada;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -47,12 +51,13 @@ public class UserEntity implements UserDetails {
     public UserEntity() {
     }
 
-    public UserEntity(Long id, String username, String password, Set<UserRole> roles, LocalDateTime creaccionUsuario) {
+    public UserEntity(Long id, String username, String password, Set<UserRole> roles, LocalDateTime creaccionUsuario, LocalDateTime inicionSesiada) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.roles = roles;
         this.creaccionUsuario = creaccionUsuario;
+        this.inicionSesiada = inicionSesiada;
     }
 
     public Long getId() {
@@ -71,11 +76,11 @@ public class UserEntity implements UserDetails {
         this.password = password;
     }
 
-    public Set<UserRole> getUserRoles() {
+    public Set<UserRole> getRoles() {
         return roles;
     }
 
-    public void setUserRoles(Set<UserRole> roles) {
+    public void setRoles(Set<UserRole> roles) {
         this.roles = roles;
     }
 
@@ -85,5 +90,25 @@ public class UserEntity implements UserDetails {
 
     public void setCreaccionUsuario(LocalDateTime creaccionUsuario) {
         this.creaccionUsuario = creaccionUsuario;
+    }
+
+    public LocalDateTime getInicionSesiada() {
+        return inicionSesiada;
+    }
+
+    public void setInicionSesiada(LocalDateTime inicionSesiada) {
+        this.inicionSesiada = inicionSesiada;
+    }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                ", creaccionUsuario=" + creaccionUsuario +
+                ", inicionSesiada=" + inicionSesiada +
+                '}';
     }
 }
