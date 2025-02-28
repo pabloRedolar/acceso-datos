@@ -12,17 +12,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/auth")
 public class AuthController {
 
+    @Autowired
     private AuthService authService;
-    private JWTUtil jwtUtil;
 
     @Autowired
-    public AuthController(AuthService authService, JWTUtil jwtUtil) {
-        this.authService = authService;
-        this.jwtUtil = jwtUtil;
-    }
+    private JWTUtil jwtUtil;
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO){
+    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO) {
         System.out.println("Login");
         String token = authService.login(loginDTO);
         JwtAuthResponse jwtAuthResponse = new JwtAuthResponse();
@@ -38,8 +35,8 @@ public class AuthController {
 
     }
 
-    @GetMapping("/createToken")
-    public ResponseEntity<?> createToken() {
-        return ResponseEntity.ok(jwtUtil.generateToken("pabloRedolar"));
-    }
+//    @GetMapping("/createToken")
+//    public ResponseEntity<?> createToken(@) {
+//        return ResponseEntity.ok(jwtUtil.generateToken("pabloRedolar"));
+//    }
 }

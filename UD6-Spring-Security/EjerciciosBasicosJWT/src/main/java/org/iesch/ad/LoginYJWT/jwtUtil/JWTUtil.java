@@ -91,4 +91,10 @@ public class JWTUtil {
                 .compact();
     }
 
+    public boolean validaToken(String token) {
+        String username = extractUsername(token);
+
+        return validateToken(token, username);
+    }
+
 }

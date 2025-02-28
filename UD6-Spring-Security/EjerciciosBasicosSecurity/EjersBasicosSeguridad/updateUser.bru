@@ -4,10 +4,14 @@ meta {
   seq: 4
 }
 
-post {
-  url: http://localhost:8080/admin/create
+put {
+  url: http://localhost:8080/admin/update?id=3
   body: json
   auth: basic
+}
+
+params:query {
+  id: 3
 }
 
 auth:basic {
@@ -17,7 +21,9 @@ auth:basic {
 
 body:json {
   {
-    "username": "manuel",
+    "username": "manuela",
     "password": "m4nUela1.55&"
+    
+    
   }
 }

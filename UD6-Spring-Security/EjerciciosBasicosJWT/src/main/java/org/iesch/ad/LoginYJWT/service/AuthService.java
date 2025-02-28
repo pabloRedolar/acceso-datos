@@ -17,13 +17,14 @@ public class AuthService {
     @Autowired
     JWTUtil jwtUtil;
 
-    public String login (LoginDTO loginDTO){
+    public String login(LoginDTO loginDTO) {
         System.out.println("AuthService Login");
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginDTO.getUsername(),
                         loginDTO.getPassword()
                 ));
+
         System.out.println(authentication.toString());
         System.out.println();
         authentication.getAuthorities().forEach(System.out::println);

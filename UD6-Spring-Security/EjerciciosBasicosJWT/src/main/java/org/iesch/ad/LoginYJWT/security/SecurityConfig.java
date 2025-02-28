@@ -1,6 +1,7 @@
 package org.iesch.ad.LoginYJWT.security;
 
 import org.iesch.ad.LoginYJWT.filtro.JwtAuthenticationFilter;
+import org.iesch.ad.LoginYJWT.modelo.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,15 +42,16 @@ public class SecurityConfig {
 //                    authorize.requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN");
 //                    authorize.requestMatchers(HttpMethod.GET, "/api/**").hasAnyRole("ADMIN", "USER");
 //                    authorize.requestMatchers(HttpMethod.PATCH, "/api/**").hasAnyRole("ADMIN", "USER");
-//                    authorize.requestMatchers(HttpMethod.GET, "/api/**").permitAll();
+//                    authorize.requestMatchers(HttpMethod.GET, "/api/**").hasRole("ADMIN");
                     authorize.requestMatchers("/api/auth/**").permitAll();
-                    authorize.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll();
+
+//                    authorize.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll();
                     authorize.anyRequest().authenticated();
+
                 });//.httpBasic(Customizer.withDefaults());
 
         http.exceptionHandling( exception -> exception
                 .authenticationEntryPoint(jwtAutenticationEntryPoint));
-
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
