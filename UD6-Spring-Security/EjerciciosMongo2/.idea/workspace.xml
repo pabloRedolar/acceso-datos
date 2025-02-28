@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30abc9db-cf26-4995-a040-50b1fbd74f24" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/models/DTOs/UserEntityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROYECTOS-EXAMEN-JUANMA/LoginYJWT/src/main/java/org/iesch/ad/LoginYJWT/jwtUtil/JWTUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROYECTOS-EXAMEN-JUANMA/LoginYJWT/src/main/java/org/iesch/ad/LoginYJWT/jwtUtil/JWTUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/java/org/iesch/ad/crudpersonas/CrudPersonasApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/java/org/iesch/ad/crudpersonas/controllers/PersonaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/java/org/iesch/ad/crudpersonas/models/Direccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/java/org/iesch/ad/crudpersonas/models/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/java/org/iesch/ad/crudpersonas/repositories/PersonaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/CRUDpersonas/src/test/java/org/iesch/ad/crudpersonas/CrudPersonasApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/Ejercicios2Mongo/Buscar por edad y ciudad.bru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/Ejercicios2Mongo/Buscar por nombre o apellido.bru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/Ejercicios2Mongo/PostPersonas.bru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/Ejercicios2Mongo/bruno.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/Ejercicios2Mongo/buscarRangoEdadYcalleXXX.bru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/Ejercicios-Mongo-2/MongoEjercicio1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/import.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/DemoFiltrosModeloUsuarioApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/controllers/ZonaAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/controllers/ZonaPublica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/models/UserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/models/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/repositories/UserEntityRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/security/CustomAuthenticationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/security/PasswordEncoderConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/services/CustomUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoFiltros_ModeloUsuario/target/classes/org/iesch/ad/demoFiltros_ModeloUsuario/services/UserEntityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/target/classes/org/iesch/org/demoGenerateJWT/DemoGenerateJwtApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/target/classes/org/iesch/org/demoGenerateJWT/controllers/ControllerJWT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoGenerateJWT/target/classes/org/iesch/org/demoGenerateJWT/utilJWT/JWTutil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/jpa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/DemoSeguridadApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/controllers/DemoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/controllers/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/models/UserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/models/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/repositories/UserEntityRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UD5-Spring-Mongo/demoMongoDBSeguridad/target/classes/org/iesch/ad/demoSeguridad/services/UserEntityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/services/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EjerciciosBasicosSecurity/src/main/java/org/iesch/ad/EjerciciosBasicosSecurity/services/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/EjerciciosMongo2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/controllers/PersonaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/controllers/PersonaControllerUsingTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/models/Direccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/models/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/repositories/PersonaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesch/ad/ejerciciosmongo2/service/PersonaServiceUsingTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesch/ad/ejerciciosmongo2/EjerciciosMongo2ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pabloRedolar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pabloRedolar/acceso-datos.git&quot;,
+    &quot;accountId&quot;: &quot;381e84e6-95e9-41a1-965a-e32eb365edc8&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2t5X5s3JtvvR0cTFFTJimPpAt45" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.EjerciciosMongo2Application.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Redo/Desktop/DAM2/acceso-datos/UD6-Spring-Security/EjerciciosBasicosSecurity",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "application.passwordSafe",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="EjerciciosMongo2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EjerciciosMongo2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.iesch.ad.ejerciciosmongo2.EjerciciosMongo2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30abc9db-cf26-4995-a040-50b1fbd74f24" name="Changes" comment="" />
+      <created>1739642729161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739642729161</updated>
+      <workItem from="1739642730088" duration="3533000" />
+      <workItem from="1739706276182" duration="17358000" />
+      <workItem from="1739796056053" duration="600000" />
+      <workItem from="1740741390724" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

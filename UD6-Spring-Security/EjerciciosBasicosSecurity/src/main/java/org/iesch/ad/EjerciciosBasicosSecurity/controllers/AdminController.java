@@ -5,6 +5,7 @@ import org.iesch.ad.EjerciciosBasicosSecurity.models.UserEntity;
 import org.iesch.ad.EjerciciosBasicosSecurity.models.UserRole;
 import org.iesch.ad.EjerciciosBasicosSecurity.repositories.UserEntityRepository;
 import org.iesch.ad.EjerciciosBasicosSecurity.services.AdminService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,13 +36,24 @@ public class AdminController {
     @GetMapping("/read")
     public ResponseEntity<?> readUser() {
 
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(userEntityRepository.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(adminService.devuelveUserDTO());
     }
+
+//    @PutMapping("/update")
+//    public ResponseEntity<?> updateUser(@RequestParam Long id, @RequestBody UserEntity userEntity) {
+//
+//        if (userEntityRepository.existsById(id)) {
+//            userEntity.setId(id);
+//            return ResponseEntity.ok(userEntityRepository.save(userEntity));
+//
+//        } else throw new UsernameNotFoundException("El usuario no existe");
+//
+//    }
 
     @PutMapping("/update")
     public ResponseEntity<?> updateUser(@RequestParam Long id, @RequestBody UserEntity userEntity) {
 
-        UserEntity entity = userEntityRepository.findById(id).orElseThrow(() -> new UsernameNotFoundException("No se encuentra"));
+        UserEntity entity = userEntityRepository.findById(id).orElseThrow(() -> new UsernameNotFoundException("No se encuentra el usuario"));
 
         entity.setUsername(userEntity.getUsername());
         entity.setPassword(userEntity.getPassword());
@@ -50,6 +62,19 @@ public class AdminController {
 
         return ResponseEntity.ok(entity);
     }
+
+//    @PutMapping("/update")
+//    public ResponseEntity<?> updateUser(@RequestParam Long id, @RequestBody UserEntity userEntity) {
+//
+//        UserEntity entity = userEntityRepository.findById(id)
+//                .orElseThrow(() -> new UsernameNotFoundException("No se encuentra el usuario"));
+//
+//        BeanUtils.copyProperties(userEntity, entity, "id"); // Evita modificar el ID
+//
+//        userEntityRepository.save(entity);
+//
+//        return ResponseEntity.ok(entity);
+//    }
 
     @DeleteMapping("/delete")
     public ResponseEntity<?> deleteUser(@RequestParam Long id) {

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "EjersBasicosJWT",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
