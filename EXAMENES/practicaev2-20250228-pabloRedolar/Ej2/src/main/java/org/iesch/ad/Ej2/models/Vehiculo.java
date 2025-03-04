@@ -7,14 +7,14 @@ public class Vehiculo {
     private String marca;
     private String modelo;
     private TipoVehiculo tipo;
-    private String cilindrada;
+    private int cilindrada;
     private int numero_cilindros;
     private List<Revision> revisiones;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(String matricula, String marca, String modelo, TipoVehiculo tipo, String cilindrada, int numero_cilindros, List<Revision> revisiones) {
+    public Vehiculo(String matricula, String marca, String modelo, TipoVehiculo tipo, int cilindrada, int numero_cilindros, List<Revision> revisiones) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
@@ -57,11 +57,11 @@ public class Vehiculo {
         this.tipo = tipo;
     }
 
-    public String getCilindrada() {
+    public int getCilindrada() {
         return cilindrada;
     }
 
-    public void setCilindrada(String cilindrada) {
+    public void setCilindrada(int cilindrada) {
         this.cilindrada = cilindrada;
     }
 

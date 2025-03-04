@@ -12,8 +12,8 @@ import java.util.Date;
 import java.util.List;
 
 
-@Document(collection = "personas")
-public class Persona implements UserDetails {
+@Document()
+public class Persona {
 
     @Id
     private String id;
@@ -112,20 +112,5 @@ public class Persona implements UserDetails {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
-
-    @Override
-    public String getPassword() {
-        return "";
-    }
-
-    @Override
-    public String getUsername() {
-        return "";
     }
 }
