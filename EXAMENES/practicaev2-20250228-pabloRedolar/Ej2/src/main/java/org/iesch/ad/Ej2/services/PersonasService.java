@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -71,16 +71,60 @@ public class PersonasService {
             if (persona != null) {
                 List<Vehiculo> vehiculos = persona.getVehiculos();
 
-                vehiculos.forEach(vehiculo1 -> matriculas.add(vehiculo1.getMatricula()));
-
                 vehiculos.add(vehiculo);
                 persona.setVehiculos(vehiculos);
 
                 return mongoTemplate.save(persona);
 
-            } else return ResponseEntity.badRequest().body("Error: El usuario no existe");
+            } else throw new UsernameNotFoundException("El usuario no existe");
 
-        } else return ResponseEntity.badRequest().body("Error: Matricula duplicada");
+        } else return null;
+
+    }
+
+    public Boolean eliminarVechiculoDePersonaPorMatriculaId(String id, String matricula) {
+
+        Persona persona = mongoTemplate.findById(id, Persona.class);
+        if (persona != null) {
+
+            persona.getVehiculos().removeIf(vehiculo -> vehiculo.getMatricula().equals(matricula));
+
+            mongoTemplate.save(persona);
+
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public Object sacarPotenciaFiscal(String matricula) {
+
+        Persona persona = mongoTemplate.findOne(Query.query(Criteria.where("vehiculos.matricula").is(matricula)), Persona.class);
+        if (persona != null) {
+
+//            persona.getVehiculos().forEach(vehiculo -> {
+//
+//                if (vehiculo.getMatricula().equals(matricula)) {
+//                    return Math.pow(((double) vehiculo.getCilindrada() / vehiculo.getNumero_cilindros()), 0.6) * 0.08 * vehiculo.getNumero_cilindros();
+//                }
+//
+//            });
+
+            Vehiculo vehiculo = persona.getVehiculos().stream().filter(vehiculo1 -> vehiculo1.getMatricula().equals(matricula)).findFirst().orElseThrow(() -> new RuntimeException("aaaa"));
+
+            double potencia = Math.pow(((double) vehiculo.getCilindrada() / vehiculo.getNumero_cilindros()), 0.6) * 0.08 * vehiculo.getNumero_cilindros();
+
+            HashMap<String, String> a = new HashMap<>();
+
+            a.put("matricula", vehiculo.getMatricula());
+            a.put("potencia fiscal", String.valueOf(potencia));
+
+            return a;
+
+        }
+
+        return null;
 
     }
 }

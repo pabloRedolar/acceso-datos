@@ -4,8 +4,8 @@ meta {
   seq: 3
 }
 
-post {
-  url: http://localhost:8080/personas/67c77b19bed4bc14783e4b8f/vehiculos
+get {
+  url: http://localhost:8080/personas/67c79590ba7abb069fdc4deb/vehiculos/1234-BCU
   body: json
   auth: basic
 }
@@ -17,34 +17,17 @@ auth:basic {
 
 body:json {
   {
-    "nombre": "Pablo",
-    "apellido": "Redolar Sánchez",
-    "direccion": "Calle urbanizacion plano alto, 36",
-    "telefono": "659981050",
-    "dni": "18456278C",
-    "fechanacimineto": "2005-01-20",
-    "licencias": [
+    "matricula": "1234-GNP",
+    "marca": "Seat",
+    "modelo": "Ibiza 1.4 TDI",
+    "tipo": "COCHE",
+    "cilindrada": 4,
+    "numero_cilindros": 14,
+    "revisiones": [
       {
-        "tipo": "B1",
-        "fecha_expedicion": "2025-03-04",
-        "fecha_expiracion": "2027-03-04"
-      }
-    ],
-    "vehiculos": [
-      {
-        "matricula": "9109-GNP",
-        "marca": "Seat",
-        "modelo": "Ibiza 1.4 TDI",
-        "tipo": "COCHE",
-        "cilindrada": 4,
-        "numero_cilindros": 14,
-        "revisiones": [
-          {
-            "resultado": true,
-            "fecha": "2025-03-05",
-            "valido_hasta": "2026-03-05"
-          }
-        ]
+        "resultado": true,
+        "fecha": "2025-03-05",
+        "valido_hasta": "2026-03-05"
       }
     ]
   }

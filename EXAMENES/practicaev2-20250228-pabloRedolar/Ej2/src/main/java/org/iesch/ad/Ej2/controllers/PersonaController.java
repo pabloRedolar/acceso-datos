@@ -53,11 +53,38 @@ public class PersonaController {
     }
 
     //2.7
-
-    //Preguntar a la IA si esto debe ser un post o un put
     @PostMapping("/personas/{id}/vehiculos")
     public ResponseEntity<?> crearVehiculoPersonaPorId(@PathVariable String id, @RequestBody Vehiculo vehiculo) {
 
-        return ResponseEntity.ok(personasService.crearVehiculoPersonaPorId(id, vehiculo));
+        Persona persona = (Persona) personasService.crearVehiculoPersonaPorId(id, vehiculo);
+
+        if (persona == null) {
+            return ResponseEntity.badRequest().build();
+        } else {
+            return ResponseEntity.ok(persona);
+        }
+
     }
+
+    //2.8
+    @DeleteMapping("/personas/{id}/vehiculos/{matricula}")
+    public ResponseEntity<?> eliminarVechiculoDePersonaPorMatriculaId(@PathVariable String id, @PathVariable String matricula) {
+
+        if (personasService.eliminarVechiculoDePersonaPorMatriculaId(id, matricula)) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
+    //2.9
+    @GetMapping("/vehiculos/{matricula}/potencia-fiscal")
+    public ResponseEntity<?> sacarPotenciaFiscal(@PathVariable String matricula) {
+
+        return ResponseEntity.ok(personasService.sacarPotenciaFiscal(matricula));
+
+
+    }
+
 }
