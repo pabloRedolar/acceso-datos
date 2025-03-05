@@ -1,5 +1,6 @@
 package org.iesch.ad.Ej2.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vehiculo {
@@ -9,7 +10,7 @@ public class Vehiculo {
     private TipoVehiculo tipo;
     private int cilindrada;
     private int numero_cilindros;
-    private List<Revision> revisiones;
+    private List<Revision> revisiones = new ArrayList<>();
 
     public Vehiculo() {
     }
@@ -79,5 +80,18 @@ public class Vehiculo {
 
     public void setRevisiones(List<Revision> revisiones) {
         this.revisiones = revisiones;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "matricula='" + matricula + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", tipo=" + tipo +
+                ", cilindrada=" + cilindrada +
+                ", numero_cilindros=" + numero_cilindros +
+                ", revisiones=" + revisiones +
+                '}';
     }
 }

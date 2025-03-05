@@ -39,4 +39,13 @@ public class Revision {
     public void setValido_hasta(LocalDate valido_hasta) {
         this.valido_hasta = valido_hasta;
     }
+
+    @Override
+    public String toString() {
+        return "Revision{" +
+                "resultado=" + resultado +
+                ", fecha=" + fecha +
+                ", valido_hasta=" + valido_hasta +
+                '}';
+    }
 }

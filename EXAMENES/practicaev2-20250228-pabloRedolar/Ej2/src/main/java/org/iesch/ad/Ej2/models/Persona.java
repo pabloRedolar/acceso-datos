@@ -1,18 +1,16 @@
 package org.iesch.ad.Ej2.models;
 
+import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.annotation.Collation;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.Collection;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 
-@Document()
+@Document(value = "personas")
 public class Persona {
 
     @Id
@@ -22,15 +20,15 @@ public class Persona {
     private String direccion;
     private String telefono;
     private String dni;
-    private Date fechanacimineto;
+    private LocalDate fechanacimineto;
 
-    private List<Licencia> licencias;
-    private List<Vehiculo> vehiculos;
+    private List<Licencia> licencias = new ArrayList<>();
+    private List<Vehiculo> vehiculos = new ArrayList<>();
 
     public Persona() {
     }
 
-    public Persona(String id, String nombre, String apellido, String direccion, String telefono, String dni, Date fechanacimineto, List<Licencia> licencias, List<Vehiculo> vehiculos) {
+    public Persona(String id, String nombre, String apellido, String direccion, String telefono, String dni, LocalDate fechanacimineto, List<Licencia> licencias, List<Vehiculo> vehiculos) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -82,11 +80,11 @@ public class Persona {
         this.dni = dni;
     }
 
-    public Date getFechanacimineto() {
+    public LocalDate getFechanacimineto() {
         return fechanacimineto;
     }
 
-    public void setFechanacimineto(Date fechanacimineto) {
+    public void setFechanacimineto(LocalDate fechanacimineto) {
         this.fechanacimineto = fechanacimineto;
     }
 
@@ -112,5 +110,20 @@ public class Persona {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", dni='" + dni + '\'' +
+                ", fechanacimineto=" + fechanacimineto +
+                ", licencias=" + licencias +
+                ", vehiculos=" + vehiculos +
+                '}';
     }
 }

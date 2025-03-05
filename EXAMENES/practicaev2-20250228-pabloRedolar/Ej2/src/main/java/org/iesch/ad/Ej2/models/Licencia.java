@@ -37,4 +37,13 @@ public class Licencia {
     public void setFecha_expiracion(LocalDate fecha_expiracion) {
         this.fecha_expiracion = fecha_expiracion;
     }
+
+    @Override
+    public String toString() {
+        return "Licencia{" +
+                "tipo='" + tipo + '\'' +
+                ", fecha_expedicion=" + fecha_expedicion +
+                ", fecha_expiracion=" + fecha_expiracion +
+                '}';
+    }
 }
