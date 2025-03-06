@@ -1,0 +1,592 @@
+[
+    {
+        "_id": "1",
+        "name": "John Doe",
+        "age": 21,
+        "address": {
+            "street": "123 Main St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62701"
+        },
+        "courses": [
+            {
+                "courseId": "CS101",
+                "courseName": "Introduction to Computer Science",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 78
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 92
+                    }
+                ]
+            },
+            {
+                "courseId": "MATH123",
+                "courseName": "Calculus I",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 88
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 84
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 90
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Basketball",
+                "position": "Forward"
+            },
+            {
+                "activity": "Chess Club",
+                "role": "Member"
+            }
+        ]
+    },
+    {
+        "_id": "2",
+        "name": "Jane Smith",
+        "age": 22,
+        "address": {
+            "street": "456 Elm St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62702"
+        },
+        "courses": [
+            {
+                "courseId": "ENG201",
+                "courseName": "English Literature",
+                "grades": [
+                    {
+                        "assignment": "Essay 1",
+                        "grade": 90
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 88
+                    }
+                ]
+            },
+            {
+                "courseId": "HIST101",
+                "courseName": "World History",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 92
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 89
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 94
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Soccer",
+                "position": "Goalkeeper"
+            },
+            {
+                "activity": "Debate Club",
+                "role": "President"
+            }
+        ]
+    },
+    {
+        "_id": "3",
+        "name": "Alice Johnson",
+        "age": 20,
+        "address": {
+            "street": "789 Oak St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62703"
+        },
+        "courses": [
+            {
+                "courseId": "BIO101",
+                "courseName": "Biology I",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 87
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 82
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 89
+                    }
+                ]
+            },
+            {
+                "courseId": "CHEM101",
+                "courseName": "Chemistry I",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 90
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 88
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Swimming",
+                "position": "Swimmer"
+            },
+            {
+                "activity": "Science Club",
+                "role": "Member"
+            }
+        ]
+    },
+    {
+        "_id": "4",
+        "name": "Bob Brown",
+        "age": 23,
+        "address": {
+            "street": "321 Pine St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62704"
+        },
+        "courses": [
+            {
+                "courseId": "PHYS101",
+                "courseName": "Physics I",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 80
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 87
+                    }
+                ]
+            },
+            {
+                "courseId": "MATH124",
+                "courseName": "Calculus II",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 88
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 84
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 90
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Football",
+                "position": "Quarterback"
+            },
+            {
+                "activity": "Math Club",
+                "role": "Treasurer"
+            }
+        ]
+    },
+    {
+        "_id": "5",
+        "name": "Charlie Davis",
+        "age": 21,
+        "address": {
+            "street": "654 Maple St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62705"
+        },
+        "courses": [
+            {
+                "courseId": "CS102",
+                "courseName": "Data Structures",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 78
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 92
+                    }
+                ]
+            },
+            {
+                "courseId": "MATH125",
+                "courseName": "Linear Algebra",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 88
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 84
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 90
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Basketball",
+                "position": "Guard"
+            },
+            {
+                "activity": "Coding Club",
+                "role": "Member"
+            }
+        ]
+    },
+    {
+        "_id": "6",
+        "name": "Diana Evans",
+        "age": 22,
+        "address": {
+            "street": "987 Birch St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62706"
+        },
+        "courses": [
+            {
+                "courseId": "ENG202",
+                "courseName": "Creative Writing",
+                "grades": [
+                    {
+                        "assignment": "Essay 1",
+                        "grade": 90
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 88
+                    }
+                ]
+            },
+            {
+                "courseId": "HIST102",
+                "courseName": "American History",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 92
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 89
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 94
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Volleyball",
+                "position": "Setter"
+            },
+            {
+                "activity": "Drama Club",
+                "role": "Lead Actress"
+            }
+        ]
+    },
+    {
+        "_id": "7",
+        "name": "Ethan Foster",
+        "age": 20,
+        "address": {
+            "street": "654 Cedar St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62707"
+        },
+        "courses": [
+            {
+                "courseId": "BIO102",
+                "courseName": "Biology II",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 87
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 82
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 89
+                    }
+                ]
+            },
+            {
+                "courseId": "CHEM102",
+                "courseName": "Chemistry II",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 90
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 88
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Track",
+                "position": "Runner"
+            },
+            {
+                "activity": "Science Club",
+                "role": "Vice President"
+            }
+        ]
+    },
+    {
+        "_id": "8",
+        "name": "Fiona Green",
+        "age": 23,
+        "address": {
+            "street": "321 Walnut St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62708"
+        },
+        "courses": [
+            {
+                "courseId": "PHYS102",
+                "courseName": "Physics II",
+                "grades": [
+                    {
+                        "assignment": "Lab 1",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 80
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 87
+                    }
+                ]
+            },
+            {
+                "courseId": "MATH126",
+                "courseName": "Differential Equations",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 88
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 84
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 90
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Tennis",
+                "position": "Player"
+            },
+            {
+                "activity": "Math Club",
+                "role": "President"
+            }
+        ]
+    },
+    {
+        "_id": "9",
+        "name": "George Harris",
+        "age": 21,
+        "address": {
+            "street": "987 Spruce St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62709"
+        },
+        "courses": [
+            {
+                "courseId": "CS103",
+                "courseName": "Algorithms",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 78
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 92
+                    }
+                ]
+            },
+            {
+                "courseId": "MATH127",
+                "courseName": "Probability",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 88
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 84
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 90
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Baseball",
+                "position": "Pitcher"
+            },
+            {
+                "activity": "Coding Club",
+                "role": "Secretary"
+            }
+        ]
+    },
+    {
+        "_id": "10",
+        "name": "Hannah Johnson",
+        "age": 22,
+        "address": {
+            "street": "654 Pine St",
+            "city": "Springfield",
+            "state": "IL",
+            "zip": "62710"
+        },
+        "courses": [
+            {
+                "courseId": "ENG203",
+                "courseName": "Modern Literature",
+                "grades": [
+                    {
+                        "assignment": "Essay 1",
+                        "grade": 90
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 85
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 88
+                    }
+                ]
+            },
+            {
+                "courseId": "HIST103",
+                "courseName": "European History",
+                "grades": [
+                    {
+                        "assignment": "Homework 1",
+                        "grade": 92
+                    },
+                    {
+                        "assignment": "Midterm",
+                        "grade": 89
+                    },
+                    {
+                        "assignment": "Final",
+                        "grade": 94
+                    }
+                ]
+            }
+        ],
+        "extracurriculars": [
+            {
+                "activity": "Softball",
+                "position": "Catcher"
+            },
+            {
+                "activity": "Debate Club",
+                "role": "Member"
+            }
+        ]
+    }
+]
