@@ -35,15 +35,12 @@ public class UserEntity implements UserDetails {
 
     //private LocalDateTime lastPasswordChangeAt = LocalDateTime.now();
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream()
                 .map(rol -> new SimpleGrantedAuthority("ROLE_" + rol.name()))
                 .toList();
     }
-
-
 
     //public boolean isAdmin() {
 //    return roles.contains(UserRole.ADMIN);

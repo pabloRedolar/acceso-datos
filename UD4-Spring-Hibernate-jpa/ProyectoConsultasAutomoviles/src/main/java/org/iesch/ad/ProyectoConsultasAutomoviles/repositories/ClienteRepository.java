@@ -44,12 +44,11 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 //    capaz de devolvernos un cliente, pero sin sus coches, ni las revisiones, pero que incluya el total
 //    de coches que posee, y cuanto dinero en total se gastó en todos ellos.
 
-<<<<<<< HEAD
+
 
 //    @Query("SELECT c.nif FROM Cliente c JOIN c.coches co JOIN co.revisiones rev WHERE rev.codigo = :codigo")
 
-    @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c2.nif, c2.nombre, count(co2), sum(co2.precio))" + "FROM Cliente c2 " + "JOIN c2.coches co2 " + "WHERE c2.nif = (SELECT c.nif " + "FROM Cliente c " + "JOIN c.coches co " + "JOIN co.revisiones rev " + "WHERE rev.codigo = :codigo) group by c2")
-=======
+    @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c2.nif, c2.nombre, count(co2), sum(co2.precio))" + "FROM Cliente c2 " + "JOIN c2.coches co2 " + "WHERE c2.nif = (SELECT c.nif " + "FROM Cliente c " + "JOIN c.coches co " + "JOIN co.revisiones rev " + "WHERE rev.codigo = :codigo) group by c2");
     @Query("SELECT new org.iesch.ad.ProyectoConsultasAutomoviles.model.DTO.ClienteSinCochesDTO(c2.nif, c2.nombre, count(co2), sum(co2.precio))" +
             "FROM Cliente c2 " +
             "JOIN c2.coches co2 " +
@@ -57,11 +56,10 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
                 "FROM Cliente c " +
                 "JOIN c.coches co " +
                 "JOIN co.revisiones rev " +
-                "WHERE rev.codigo = :codigo) group by c2")
->>>>>>> ee06e56aef21b1c7a9570afcf665434fab42c843
+                "WHERE rev.codigo = :codigo) group by c2");
+
 
     ClienteSinCochesDTO getClienteSinCochesPorCodigoRevision(String codigo);
-<<<<<<< HEAD
 //    ClienteSinCochesDTO getClienteSinCochesPorCodigoRevision(String codigo);
 
 

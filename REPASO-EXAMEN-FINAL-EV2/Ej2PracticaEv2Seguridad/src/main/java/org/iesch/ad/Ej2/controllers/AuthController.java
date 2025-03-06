@@ -1,11 +1,14 @@
-package org.iesch.ad.LoginYJWT.controller;
+package org.iesch.ad.Ej2.controllers;
 
-import org.iesch.ad.LoginYJWT.dto.JwtAuthResponse;
-import org.iesch.ad.LoginYJWT.dto.LoginDTO;
-import org.iesch.ad.LoginYJWT.service.AuthService;
+import org.iesch.ad.Ej2.models.dto.JwtAuthResponse;
+import org.iesch.ad.Ej2.models.dto.LoginDTO;
+import org.iesch.ad.Ej2.services.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/auth")

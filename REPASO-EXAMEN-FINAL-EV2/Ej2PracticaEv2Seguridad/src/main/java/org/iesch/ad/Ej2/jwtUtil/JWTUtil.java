@@ -1,4 +1,4 @@
-package org.iesch.ad.LoginYJWT.jwtUtil;
+package org.iesch.ad.Ej2.jwtUtil;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
