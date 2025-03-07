@@ -103,14 +103,6 @@ public class PersonasService {
         Persona persona = mongoTemplate.findOne(Query.query(Criteria.where("vehiculos.matricula").is(matricula)), Persona.class);
         if (persona != null) {
 
-//            persona.getVehiculos().forEach(vehiculo -> {
-//
-//                if (vehiculo.getMatricula().equals(matricula)) {
-//                    return Math.pow(((double) vehiculo.getCilindrada() / vehiculo.getNumero_cilindros()), 0.6) * 0.08 * vehiculo.getNumero_cilindros();
-//                }
-//
-//            });
-
             Vehiculo vehiculo = persona.getVehiculos().stream().filter(vehiculo1 -> vehiculo1.getMatricula().equals(matricula)).findFirst().orElseThrow(() -> new RuntimeException("aaaa"));
 
             double potencia = Math.pow(((double) vehiculo.getCilindrada() / vehiculo.getNumero_cilindros()), 0.6) * 0.08 * vehiculo.getNumero_cilindros();
