@@ -5,50 +5,19 @@ meta {
 }
 
 post {
-  url: http://localhost:8080/jwt/personas
+  url: http://localhost:8080/api/auth/login
   body: json
-  auth: bearer
+  auth: basic
 }
 
-auth:bearer {
-  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDYXJsb3MiLCJpYXQiOjE3NDEyNjc1NTMsImV4cCI6MTc0MTM1Mzk1M30.-5lWQXIbHGDorMzC0KMBm-Gs-CTC2SPop94AKLMjd10
+auth:basic {
+  username: Juan
+  password: 1234
 }
 
 body:json {
   {
-    "_id": {
-      "$oid": "67c79590ba7abb069cdc4ded"
-    },
     "nombre": "Juan",
-    "apellido": "Martínez López",
-    "password": "1234",
-    "direccion": "Calle Luna, 45",
-    "telefono": "678901234",
-    "dni": "87654321B",
-    "fechanacimineto": "1990-12-25",
-    "licencias": [
-      {
-        "tipo": "A",
-        "fecha_expedicion": "2015-07-10T23:00:00.000Z",
-        "fecha_expiracion": "2016-07-10T23:00:00.000Z"
-      }
-    ],
-    "vehiculos": [
-      {
-        "matricula": "3456-HJK",
-        "marca": "Honda",
-        "modelo": "Civic",
-        "tipo": "COCHE",
-        "cilindrada": 1.8,
-        "numero_cilindros": 4,
-        "revisiones": [
-          {
-            "resultado": true,
-            "fecha": "2023-11-15T23:00:00.000Z",
-            "valido_hasta": "2024-11-15T23:00:00.000Z"
-          }
-        ]
-      }
-    ]
+    "password": "1234"
   }
 }

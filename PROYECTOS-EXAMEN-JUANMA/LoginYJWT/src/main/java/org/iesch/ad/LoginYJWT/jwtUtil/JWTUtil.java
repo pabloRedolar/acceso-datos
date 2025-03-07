@@ -19,12 +19,14 @@ public class JWTUtil {
     @Value("${jwt.secret}")
     private String secret;// "your-256-bit-secret-your-256-bit-secret";
 
-    private final long jwtExpiration = 86400000;
+
+    private long jwtExpiration = 86400000;
 
     private SecretKey getSigningKey() {
         byte[] keyBytes = secret.getBytes();
         return Keys.hmacShaKeyFor(keyBytes);
     }
+
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -62,9 +64,8 @@ public class JWTUtil {
         //claims.put("rol", "rol");
         return createToken(claims, username);
     }
-
     // generate JWT token
-    public String generateToken(Authentication authentication) {
+    public String generateToken(Authentication authentication){
 
         String username = authentication.getName();
         Date currentDate = new Date();
@@ -89,5 +90,6 @@ public class JWTUtil {
                 .signWith(getSigningKey())
                 .compact();
     }
+
 
 }

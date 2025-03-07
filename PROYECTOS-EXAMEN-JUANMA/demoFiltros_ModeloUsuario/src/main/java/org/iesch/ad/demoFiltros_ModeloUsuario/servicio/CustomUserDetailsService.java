@@ -20,12 +20,14 @@ public class CustomUserDetailsService implements UserDetailsService {
     private UserEntityRepository userEntityRepository;
 
 
+
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity userEntity = userEntityService.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         userEntity.setLastLogin(LocalDateTime.now());
-        userEntityRepository.save(userEntity);
+       userEntityRepository.save(userEntity);
         System.out.println(userEntity);
         return userEntity; // Nueva forma.
     }

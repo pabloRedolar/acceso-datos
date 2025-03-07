@@ -36,6 +36,7 @@ public class SecurityConfig {
         // Al usar JWT las csrf se pueden o deben deshabilitar por que al trabajar con tokens jwt no hay riesgos de ataque
         http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests(authorizeRequests -> {
             authorizeRequests.requestMatchers("/api/auth/**").permitAll();
+            authorizeRequests.requestMatchers("/web/**").permitAll();
             authorizeRequests.requestMatchers(HttpMethod.GET).permitAll();
             authorizeRequests.requestMatchers(HttpMethod.POST).authenticated();
             authorizeRequests.requestMatchers(HttpMethod.PUT).authenticated();

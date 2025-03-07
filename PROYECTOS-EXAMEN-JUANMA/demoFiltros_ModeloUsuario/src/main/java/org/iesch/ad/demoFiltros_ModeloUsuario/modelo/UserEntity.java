@@ -44,6 +44,8 @@ public class UserEntity implements UserDetails {
                 .toList();
     }
 
+
+
     //public boolean isAdmin() {
 //    return roles.contains(UserRole.ADMIN);
 //}
