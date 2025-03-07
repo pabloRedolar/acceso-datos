@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Personas vehiculos</title>
 </head>
 <body>
 <h1>Formulario de Ejemplo</h1>
+
 <form method="post" th:action="@{procesarFormulario}" th:object="${loginDTO}">
     <label for="nombre">Usuario: </label>
-    <input id="nombre" th:field="*{nombre}" type="text" required/><br/>
+    <input id="nombre" required th:field="*{nombre}" type="text"/><br/>
 
     <label for="password">Contraseña: </label>
-    <input id="password" th:field="*{password}" type="password" required/><br/>
+    <input id="password" required th:field="*{password}" type="password"/><br/>
 
     <button type="submit">Enviar</button>
 </form>

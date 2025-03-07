@@ -4,10 +4,14 @@ meta {
   seq: 4
 }
 
-post {
-  url: http://localhost:8080/web/procesarFormulario
+get {
+  url: http://localhost:8080/web/auth/cargarDatosTabla
   body: none
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWFuIiwiaWF0IjoxNzQxMzQ5MzEyLCJleHAiOjE3NDE0MzU3MTJ9.aYzhtGcbxuHoH764OtN9bCyp9Nd51BE5NvWqDyVwKww
 }
 
 body:json {

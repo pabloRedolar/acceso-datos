@@ -33,10 +33,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        // Al usar JWT las csrf se pueden o deben deshabilitar por que al trabajar con tokens jwt no hay riesgos de ataque
+        // Al usar JWT las csrf se pueden o deben deshabilitar porque al trabajar con tokens jwt no hay riesgos de ataque
         http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests(authorizeRequests -> {
             authorizeRequests.requestMatchers("/api/auth/**").permitAll();
-            authorizeRequests.requestMatchers("/web/**").permitAll();
+            authorizeRequests.requestMatchers("/web/auth/**").authenticated();
+            authorizeRequests.requestMatchers("/web/index").permitAll();
             authorizeRequests.requestMatchers(HttpMethod.GET).permitAll();
             authorizeRequests.requestMatchers(HttpMethod.POST).authenticated();
             authorizeRequests.requestMatchers(HttpMethod.PUT).authenticated();

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymelead.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de usuarios</title>
+</head>
+<body>
+    <table border="solid">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>DNI</th>
+            <th>Fecha de nacimiento</th>
+        </tr>
+        <tr th:each="persona : ${personas}">
+            <td th:text="${persona.nombre}"></td>
+            <td th:text="${persona.apellido}"></td>
+            <td th:text="${persona.direccion}"></td>
+            <td th:text="${persona.telefono}"></td>
+            <td th:text="${persona.dni}"></td>
+            <td th:text="${persona.fechanacimineto}"></td>
+        </tr>
+    </table>
+</body>
+</html>
