@@ -1,0 +1,22 @@
+meta {
+  name: CrearSocio
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/socios
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Juan",
+    "apellidos": "Vicente",
+    "dni": "18253276C",
+    "direccion": "Calle ejemplo, 2",
+    "telefono": "698456214",
+    "prestamos": []
+  }
+}

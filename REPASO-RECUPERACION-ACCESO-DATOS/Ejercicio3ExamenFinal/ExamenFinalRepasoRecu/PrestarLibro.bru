@@ -1,0 +1,27 @@
+meta {
+  name: PrestarLibro
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/prestamos/prestar?dni=18456278C&isbn=654321
+  body: none
+  auth: none
+}
+
+params:query {
+  dni: 18456278C
+  isbn: 654321
+}
+
+body:json {
+  {
+    "nombre": "Juan",
+    "apellidos": "Vicente",
+    "dni": "18253276C",
+    "direccion": "Calle ejemplo, 2",
+    "telefono": "698456214",
+    "prestamos": []
+  }
+}

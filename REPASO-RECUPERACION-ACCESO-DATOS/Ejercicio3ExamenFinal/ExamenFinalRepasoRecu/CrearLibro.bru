@@ -1,0 +1,19 @@
+meta {
+  name: CrearLibro
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/libros
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "isbn": "654321",
+    "autor": "Anonimo",
+    "titulo": "El principito"
+  }
+}
