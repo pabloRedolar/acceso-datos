@@ -5,18 +5,22 @@ meta {
 }
 
 post {
-  url: http://localhost:8080/socios
-  body: json
+  url: http://localhost:8080/web/subirArchivo
+  body: multipartForm
   auth: none
 }
 
 body:json {
   {
-    "nombre": "Juan",
-    "apellidos": "Vicente",
-    "dni": "18253276C",
+    "nombre": "Pablo",
+    "apellidos": "Redolar",
+    "dni": "18456278C",
     "direccion": "Calle ejemplo, 2",
     "telefono": "698456214",
     "prestamos": []
   }
+}
+
+body:multipart-form {
+  archivo: @file(C:\Users\Redo\Documents\a.txt)
 }
